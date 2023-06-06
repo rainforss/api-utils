@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   const { searchString, regexPattern, regexFlags, replaceString } =
     await req.json();
-  if (!searchString || !regexPattern || !!regexFlags || !replaceString) {
+  if (!searchString || !regexPattern || !regexFlags || !replaceString) {
     return NextResponse.json(
       {
         error:
